@@ -1,19 +1,19 @@
 #include <stdio.h>
 int factorial(int n){
-if(n==0){
+if(n==0||n==1){
 return 1;
 }
 else
 {
-return n *factorial(n-1);
+fact=n *factorial(n-1);
+return fact;
 }
 }
 void main()
 {
-int num,n,f;
+int num,n,fact;
 printf("enter the limit");
 scanf("%d",&num);
-f=factorial(num);
-printf("enter the factorial %d : %d",num,f);
-getchar();
+fact=factorial(num);
+printf("enter the factorial %d : %d",num,fact);
 }
