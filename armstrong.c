@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
 int n,original,sum;
@@ -20,6 +20,34 @@ else
 printf(" number is not armstrong \n");
 }
 return 0;
+}*/
+
+#include <stdio.h>
+int armstrong(int n)
+{
+int sum=0;
+while(n!=0)
+{
+int digit=n%10;
+sum+=digit*digit*digit;
+n=n/10;
 }
-
-
+return sum;
+}
+int main()
+{
+int n,original;
+printf("enter the an number\n");
+scanf("%d",&n);
+original=n;
+int arm=armstrong(n);
+if(arm==n)
+{
+printf(" number is armstrong \n");
+}
+else
+{
+printf(" number is not armstrong \n");
+}
+return 0;
+}
